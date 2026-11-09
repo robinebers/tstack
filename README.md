@@ -1,8 +1,6 @@
 # tstack
 
-Agent skills for the PR workflow, written for any harness that reads
-`SKILL.md` skills. A fork of [t3dotgg/tstack](https://github.com/t3dotgg/tstack)
-with the harness-specific instructions removed.
+Agent skills for the PR workflow, written for any harness that reads `SKILL.md` skills. A fork of [t3dotgg/tstack](https://github.com/t3dotgg/tstack) with the harness-specific instructions removed.
 
 ## Skills
 
@@ -46,14 +44,11 @@ cp -R tstack/skills/* <skills dir>
 
 - An authenticated [GitHub CLI](https://cli.github.com) (`gh`).
 - `python3` for `babysit-pr`'s `pr-wait` script.
-- `council` and `sol-loop` need subagents that can run other providers'
-  models.
+- `council` and `sol-loop` need subagents that can run other providers' models.
 
 ## Make them yours
 
-These are starting points. Edit them. Put personal settings, like which models
-sit on your council, in your agent's instructions file, so you can update the
-skills without losing them.
+These are starting points. Edit them. Put personal settings, like which models sit on your council, in your agent's instructions file, so you can update the skills without losing them.
 
 ## License
 
