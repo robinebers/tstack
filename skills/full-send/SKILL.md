@@ -58,9 +58,8 @@ one appears.
 
 Stay active from step 1 to step 7. If you end your turn while checks or bots are
 pending, the work stops, because nobody will prompt you again. Wait with the
-watcher from `babysit-pr`, so something wakes you when the PR changes. In T3
-Code that is `watch_pull_request`. If you stop before the merge, call
-`unwatch_pull_request` first.
+watcher from `babysit-pr`, so something wakes you when the PR changes. If you
+stop before the merge, stop watching first.
 
 ## Proof
 
@@ -100,9 +99,8 @@ review" if you have high confidence in your changes.
 ## Asking the user
 
 A question in a normal message goes unseen, and the thread looks done. To ask
-the user something, use the harness's question tool so the thread shows that
-it is waiting: `AskUserQuestion` in Claude Code, `request_user_input` in Codex,
-or the question tool your harness has. Put all the context in the question:
+the user something, use the question tool so the thread shows that it is
+waiting. Put all the context in the question:
 the PR link, what blocks you, and the options with your recommendation first.
 
 Ask only when you cannot continue alone:

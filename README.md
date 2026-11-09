@@ -1,9 +1,8 @@
 # tstack
 
-The agent skills I use every day, cleaned up so anyone can use them. They work
-in Claude Code and Codex. Some use [T3 Code](https://github.com/pingdotgg/t3code)
-features when they are available and fall back to native tools when they are
-not.
+Agent skills for the PR workflow, written for any harness that reads
+`SKILL.md` skills. A fork of [t3dotgg/tstack](https://github.com/t3dotgg/tstack)
+with the harness-specific instructions removed.
 
 ## Skills
 
@@ -28,24 +27,32 @@ Some skills call others. Install the ones they need too:
 
 ## Install
 
+Clone this repo and copy `skills/*` into your agent's skills directory.
+
 ```bash
-git clone https://github.com/t3dotgg/tstack
-cp -R tstack/skills/* ~/.claude/skills/   # Claude Code
-cp -R tstack/skills/* ~/.codex/skills/    # Codex
+git clone https://github.com/robinebers/tstack
+cp -R tstack/skills/* <skills dir>
 ```
+
+| Agent | Skills dir |
+|---|---|
+| Claude Code | `~/.claude/skills/` |
+| Codex | `~/.codex/skills/` |
+| Cursor | `~/.cursor/skills/` |
+| GitHub Copilot | `~/.copilot/skills/` |
+| OpenCode | `~/.config/opencode/skills/` |
 
 ## Requirements
 
 - An authenticated [GitHub CLI](https://cli.github.com) (`gh`).
 - `python3` for `babysit-pr`'s `pr-wait` script.
-- `council` and `sol-loop` need subagents on other providers' models. T3 Code
-  does this with `delegate_task`. Otherwise you need a harness that can run
-  those models.
+- `council` and `sol-loop` need subagents that can run other providers'
+  models.
 
 ## Make them yours
 
 These are starting points. Edit them. Put personal settings, like which models
-sit on your council, in your `CLAUDE.md` or `AGENTS.md`, so you can update the
+sit on your council, in your agent's instructions file, so you can update the
 skills without losing them.
 
 ## License
