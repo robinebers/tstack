@@ -9,14 +9,23 @@ Prefix every agent-authored comment left on the user's behalf with this GitHub n
 
 ```md
 > [!NOTE]
-> 🤖 **<model> responding on behalf of <user>**
+> 🤖 **<harness> (<model>) responding on behalf of <user>**
 
 Actual comment starts here.
 ```
 
+**CRITICAL:** Omit `<model>` if it includes `-alpha`, `-preview` or similar. These models may not be publicly available and **must not be exposed.**
+
 Use the verified public name of the model that wrote the comment, and the user's name or GitHub login.
 
-If the harness does not expose a model name, use the harness name. Do not guess.
+If the harness does not expose a model name, use the harness name. Do not guess and default to a generic reply.
+
+```md
+> [!NOTE]
+> 🤖 **AI agent responding on behalf of <user>**
+
+Actual comment starts here.
+```
 
 Before posting, check the entire comment, including quoted text and attachments, for secrets and private details.
 

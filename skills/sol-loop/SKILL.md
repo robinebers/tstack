@@ -30,7 +30,7 @@ The change is base to working tree in those paths, with untracked files. Use one
 
 ## 2. Start Sol
 
-Start a Sol subagent as the reviewer and keep its ID. Pick the latest Sol unless the user named a version. Do not hardcode an ID. If Sol is unavailable, report the blocker. Do not substitute a model.
+Start a Sol subagent as the reviewer and keep its ID. Pick the latest Sol (High effort) unless the user named a different version. Do not hardcode an ID. If Sol is unavailable, report the blocker. Do not substitute a model.
 
 Do not edit scoped files while review runs. Wait for the reply. Do not poll or start a second reviewer. Timeout, error, or no reply is not approval. On failure, cancel, verify stop, restart with the ledger.
 
@@ -70,8 +70,6 @@ Agreed: APPROVE on the current behavior diff, no blocker or should open, no conc
 
 Do not push during the loop. Push after agreement only if the user asked to push, ship, or update the PR. If you push to a PR, add above the model blurb:
 
-`Reviewed with sol-loop: <N> rounds with <model>. Sol verdict: approved`.
-
-Add `on <effort>` only if verified.
+`Reviewed with sol-loop: <N> rounds with <model> on <effort>. Sol verdict: approved`.
 
 Report: rounds, model, what Sol changed, diff size before/after, fixed and declined findings with reasons, usage if exposed (else say not), pushed or not.
